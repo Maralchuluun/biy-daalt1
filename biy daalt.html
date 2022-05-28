@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            background-color: powderblue;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        button{
+            background-color: rgb(28, 194, 245);
+            width: 250px;
+            height: 30px;
+        }
+        .tsag{
+            color: grey;
+            padding-left: 30%;
+        }
+        .biy{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 80vh;
+            gap:5px;
+        }
+        .bagana{
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .toglolt{
+            color: grey;
+            font-size: 12px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 8vh;
+        }
+        .toglolt p{
+            width: 25%;
+            margin-left: 10%;
+        }
+        .temtseen{
+            margin:5%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 15vh;
+        }
+        .onoo{
+            display: flex;
+            flex-direction: row;
+        }
+        .ehniionoo{
+            background-color: yellow;
+            border: 1px solid grey;
+            border-radius: 5px;
+            width:15px;
+            height: 3vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hoyrdohonoo{
+            background-color: pink;
+            border: 1px solid grey;
+            border-radius: 5px;
+            width:15px;
+            height: 3vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tolgoi">
+        <button id="handler" onclick="startstop()">Start simulation</button>
+        <p class="tsag" id="udur">15/05/2022</p>
+    </div>
+    <div class="toglolt">
+        <p>Quarterfinals</p>
+        <p>Semifinals</p>
+        <p>Bronze medal game</p>
+        <p>Gold medal game</p>
+    </div>
+    <div class="biy">
+        <div class="neg bagana">
+            <div id="temtseen1" class="temtseen">
+                <div id="hugatsaa1"class="hugatsaa">TBD</div>
+                <div class=onoo>
+                    <div id="ehniionoo1" class="ehniionoo">0</div>
+                    <div>:</div>
+                    <div id="hoyrdohonoo1" class="hoyrdohonoo">0</div>
+                </div>
+                <div id="teams1" class="teams">Team1 Team2</div>
+            </div>
+            <div id="temtseen2" class="temtseen">
+                <div id="hugatsaa2" class="hugatsaa">TBD</div>
+                <div class=onoo>
+                    <div id="ehniionoo2" class="ehniionoo">0</div>
+                    <div>:</div>
+                    <div id="hoyrdohonoo2" class="hoyrdohonoo">0</div>
+                </div>
+                <div id="teams2" class="teams">Team3 Team4</div>
+            </div>
+            <div id="temtseen3" class="temtseen">
+                <div id="hugatsaa3" class="hugatsaa">TBD</div>
+                <div class=onoo>
+                    <div id="ehniionoo3" class="ehniionoo">0</div>
+                    <div>:</div>
+                    <div id="hoyrdohonoo3" class="hoyrdohonoo">0</div>
+                </div>
+                <div id="teams3" class="teams">Team5 Team6</div>
+            </div>
+            <div id="temtseen4" class="temtseen">
+                <div id="hugatsaa4" class="hugatsaa">TBD</div>
+                <div class=onoo>
+                    <div id="ehniionoo4" class="ehniionoo">0</div>
+                    <div>:</div>
+                    <div id="hoyrdohonoo4" class="hoyrdohonoo">0</div>
+                </div>
+                <div id="teams4" class="teams">Team7 Team8</div>
+            </div>
+        </div>
+        <div class="hoyr bagana">
+            <div id="temtseen5" class="temtseen">
+                <div id="hugatsaa5" class="hugatsaa">TBD</div>
+                <div class=onoo>
+                    <div id="ehniionoo5" class="ehniionoo">0</div>
+                    <div>:</div>
+                    <div id="hoyrdohonoo5" class="hoyrdohonoo">0</div>
+                </div>
+                <div id="bagana21" class="teams">Team1 or Team2 vs</div>
+                <div id="bagana22" class="teams">Team3 or Team4</div>
+            </div>
+            <div id="temtseen6" class="temtseen">
+                <div id="hugatsaa6" class="hugatsaa">TBD</div>
+                <div class=onoo>
+                    <div id="ehniionoo6" class="ehniionoo">0</div>
+                    <div>:</div>
+                    <div id="hoyrdohonoo6" class="hoyrdohonoo">0</div>
+                </div>
+                <div id="bagana23" class="teams">Team5 or Team6 vs</div>
+                <div id="bagana24" class="teams">Team7 or Team8</div>
+            </div>
+        </div>
+        <div class="guraw bagana">
+            <div id="temtseen7" class="temtseen">
+                <div id="hugatsaa7" class="hugatsaa">TBD</div>
+                <div class=onoo>
+                    <div id="ehniionoo7" class="ehniionoo">0</div>
+                    <div>:</div>
+                    <div id="hoyrdohonoo7" class="hoyrdohonoo">0</div>
+                </div>
+                <div id="bagana31" class="teams">Loser of Semifinals vs Loser of Semifinals</div>
+            </div>
+        </div>
+        <div class="duruw bagana">
+            <div id="temtseen8" class="temtseen">
+                <div id="hugatsaa8" class="hugatsaa">TBD</div>
+                <div class=onoo>
+                    <div id="ehniionoo8" class="ehniionoo">0</div>
+                    <div>:</div>
+                    <div id="hoyrdohonoo8" class="hoyrdohonoo">0</div>
+                </div>
+                <div id="bagana41" class="teams">Winner of Semifinals vs Winner of Semifinals</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let milliseconds=0;
+        let seconds=15;
+        let minutes=5;
+        let hours=2022;
+        let displaymilliseconds=0;
+        let displayseconds=15;
+        let displayminutes=5;
+        let displayhours=2022;
+        let status='Stopped';
+        let interval='';
+
+        function startwatch(){
+            milliseconds++;
+            if(milliseconds/100===1){
+                milliseconds=0;
+                seconds++;
+                if(seconds/30===1){
+                    seconds=1;
+                    minutes++;
+                    if(minutes/12===1){
+                        minutes=1;
+                        hours++;
+                    }
+                }
+            }
+            if(milliseconds<10){
+                displaymilliseconds='0'+milliseconds.toString();
+            }else{
+                displaymilliseconds=milliseconds;
+            }
+            if(seconds<10){
+                displayseconds='0'+seconds.toString();
+            }else{
+                displayseconds=seconds;
+            }
+            if(minutes<10){
+                displayminutes='0'+minutes.toString();
+            }else{
+                displayminutes=minutes;
+            }
+            if(hours<10){
+                displayhours='0'+hours.toString();
+            }else{
+                displayhours=hours;
+            }
+            document.getElementById('udur').innerHTML=displayseconds+'/'+displayminutes+'/'+displayhours;
+
+            
+
+            if(hugatsaa1.innerHTML == udur.innerHTML){
+                    document.getElementById('ehniionoo1').innerHTML=onoo11();
+                    document.getElementById('hoyrdohonoo1').innerHTML=onoo11();
+                    document.getElementById('temtseen1').style.backgroundColor="aqua";
+                    if(ehniionoo1.innerHTML > hoyrdohonoo1.innerHTML){
+                        bagana21.innerHTML = 'Team1';
+                        teams1.innerHTML='Winner is Team1'                     
+                    }else{
+                        bagana21.innerHTML = 'Team2';
+                        teams1.innerHTML='Winner is Team2'
+                    }
+                };
+                if(hugatsaa2.innerHTML == udur.innerHTML){
+                    document.getElementById('ehniionoo2').innerHTML=onoo11();
+                    document.getElementById('hoyrdohonoo2').innerHTML=onoo11();
+                    document.getElementById('temtseen2').style.backgroundColor="aqua";
+                    if(ehniionoo2.innerHTML > hoyrdohonoo2.innerHTML){
+                        bagana22.innerHTML="Team3";
+                        teams2.innerHTML="Winner is Team3"
+                        
+                    }else{
+                        bagana22.innerHTML="Team4";
+                        teams2.innerHTML="Winner is Team4"
+                    }
+                };
+                if(hugatsaa3.innerHTML == udur.innerHTML){
+                    document.getElementById('ehniionoo3').innerHTML=onoo11();
+                    document.getElementById('hoyrdohonoo3').innerHTML=onoo11();
+                    document.getElementById('temtseen3').style.backgroundColor="aqua";
+                    if(ehniionoo3.innerHTML > hoyrdohonoo3.innerHTML){
+                        bagana23.innerHTML="Team5";
+                        teams3.innerHTML="Winner is Team5"                    
+                    }else{
+                        bagana23.innerHTML="Team6";
+                        teams3.innerHTML="Winner is Team6"
+                    }
+                };
+                if(hugatsaa4.innerHTML == udur.innerHTML){
+                    document.getElementById('ehniionoo4').innerHTML=onoo11();
+                    document.getElementById('hoyrdohonoo4').innerHTML=onoo11();
+                    document.getElementById('temtseen4').style.backgroundColor="aqua";
+                    if(ehniionoo4.innerHTML > hoyrdohonoo4.innerHTML){
+                        bagana24.innerHTML="Team7";
+                        teams4.innerHTML="Winner is Team7"                     
+                    }else{
+                        bagana24.innerHTML="Team8";
+                        teams4.innerHTML="Winner is Team8"
+                    }
+                };
+                if(hugatsaa5.innerHTML == udur.innerHTML){
+                    document.getElementById('ehniionoo5').innerHTML=onoo11();
+                    document.getElementById('hoyrdohonoo5').innerHTML=onoo11(); 
+                    document.getElementById('temtseen5').style.backgroundColor="aqua";
+                    if(ehniionoo5.innerHTML > hoyrdohonoo5.innerHTML){
+                        bagana21.innerHTML=bagana41.innerHTML
+                        bagana22.innerHTML=bagana31.innerHTML
+                    }else{
+                        bagana21.innerHTML=bagana31.innerHTML
+                        bagana22.innerHTML=bagana41.innerHTML
+                    }
+                    
+                    }  
+                    if(hugatsaa6.innerHTML == udur.innerHTML){
+                        document.getElementById('ehniionoo6').innerHTML=onoo11();
+                        document.getElementById('hoyrdohonoo6').innerHTML=onoo11(); 
+                        document.getElementById('temtseen6').style.backgroundColor="aqua";
+                    if(ehniionoo6.innerHTML > hoyrdohonoo6.innerHTML){
+                        bagana23.innerHTML=bagana41.innerHTML
+                        bagana24.innerHTML=bagana31.innerHTML
+                    }else{
+                        bagana23.innerHTML=bagana41.innerHTML
+                        bagana24.innerHTML=bagana31.innerHTML
+                    }
+                    }
+                    if(hugatsaa7.innerHTML == udur.innerHTML){
+                            document.getElementById('ehniionoo7').innerHTML=onoo11();
+                            document.getElementById('hoyrdohonoo7').innerHTML=onoo11(); 
+                            document.getElementById('temtseen7').style.backgroundColor="aqua";
+                        
+                    }
+                    if(hugatsaa8.innerHTML == udur.innerHTML){
+                            document.getElementById('ehniionoo8').innerHTML=onoo11();
+                            document.getElementById('hoyrdohonoo8').innerHTML=onoo11(); 
+                            document.getElementById('temtseen8').style.backgroundColor="aqua";
+                            if(ehniionoo8.innerHTML > hoyrdohonoo8.innerHTML){
+                            }else{
+                    }
+                }
+
+
+            
+        }
+            
+        function startstop(){
+            if(status=='Stopped'){
+                interval=window.setInterval(startwatch,10);
+                document.getElementById('handler').innerHTML='Pause simulation';
+                status='Started';
+                document.getElementById('hugatsaa1').innerHTML=Random1()+'/05/2022';
+                document.getElementById('hugatsaa2').innerHTML=Random1()+'/05/2022';
+                document.getElementById('hugatsaa3').innerHTML=Random1()+'/05/2022';
+                document.getElementById('hugatsaa4').innerHTML=Random1()+'/05/2022';
+                document.getElementById('hugatsaa5').innerHTML=Random2()+'/05/2022';
+                document.getElementById('hugatsaa6').innerHTML=Random2()+'/05/2022';
+                document.getElementById('hugatsaa7').innerHTML=Random3()+'/05/2022';
+                document.getElementById('hugatsaa8').innerHTML=Random4()+'/05/2022';
+            }else if(status=='Started'){
+                window.clearInterval(interval);
+                document.getElementById('handler').innerHTML='Start simulation';
+                status='Stopped';
+            }
+        }  
+
+        function Random1(min = 17, max = 20) {
+        let difference = max - min;
+        let rand = Math.random();
+        rand = Math.floor( rand * difference);
+        rand = rand + min;
+        return rand;
+        } 
+        function Random2(min = 20, max = 24) {
+        let difference = max - min;
+        let rand = Math.random();
+        rand = Math.floor( rand * difference);
+        rand = rand + min;
+        return rand;
+        } 
+        function Random3(min = 24, max = 26) {
+        let difference = max - min;
+        let rand = Math.random();
+        rand = Math.floor( rand * difference);
+        rand = rand + min;
+        return rand;
+        } 
+        function Random4(min = 26, max = 28) {
+        let difference = max - min;
+        let rand = Math.random();
+        rand = Math.floor( rand * difference);
+        rand = rand + min;
+        return rand;
+        } 
+        
+        function onoo11(min=0, max=30){
+            let dif=max-min;
+            let ra= Math.random();
+            ra= Math.floor(ra*dif);
+            ra=ra+min;
+            return ra;
+        }
+        
+
+                  
+    </script>
+</body>
+</html>
