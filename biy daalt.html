@@ -169,6 +169,7 @@
                     <div id="hoyrdohonoo7" class="hoyrdohonoo">0</div>
                 </div>
                 <div id="bagana31" class="teams">Loser of Semifinals vs Loser of Semifinals</div>
+                <div id="bagana32" class="teams"></div>
             </div>
         </div>
         <div class="duruw bagana">
@@ -180,6 +181,7 @@
                     <div id="hoyrdohonoo8" class="hoyrdohonoo">0</div>
                 </div>
                 <div id="bagana41" class="teams">Winner of Semifinals vs Winner of Semifinals</div>
+                <div id="bagana42" class="teams"></div>
             </div>
         </div>
     </div>
@@ -286,32 +288,115 @@
                     document.getElementById('ehniionoo5').innerHTML=onoo11();
                     document.getElementById('hoyrdohonoo5').innerHTML=onoo11(); 
                     document.getElementById('temtseen5').style.backgroundColor="aqua";
-                    if(ehniionoo5.innerHTML > hoyrdohonoo5.innerHTML){
-                        bagana21.innerHTML=bagana41.innerHTML
-                        bagana22.innerHTML=bagana31.innerHTML
-                    }else{
-                        bagana21.innerHTML=bagana31.innerHTML
-                        bagana22.innerHTML=bagana41.innerHTML
-                    }
-                    
+                    if(ehniionoo1.innerHTML>hoyrdohonoo1.innerHTML&&ehniionoo2.innerHTML>hoyrdohonoo2.innerHTML){
+            if(ehniionoo1.innerHTML>ehniionoo2.innerHTML){
+                document.getElementById('bagana21').innerHTML="Winner is Team1"
+                document.getElementById('bagana22').innerHTML=""
+                document.getElementById('bagana31').innerHTML="Team3"
+                document.getElementById('bagana41').innerHTML="Team1"
+            }else{
+                document.getElementById('bagana21').innerHTML="Winner is Team3"
+                document.getElementById('bagana22').innerHTML=""
+                document.getElementById('bagana31').innerHTML="Team1"
+                document.getElementById('bagana41').innerHTML="Team3"
+            }
+        }else if(ehniionoo1.innerHTML>hoyrdohonoo1.innerHTML&&ehniionoo2.innerHTML<hoyrdohonoo2.innerHTML){
+            if(ehniionoo1.innerHTML>hoyrdohonoo2.innerHTML){
+                document.getElementById('bagana21').innerHTML="Winner is Team1"
+                document.getElementById('bagana22').innerHTML=""
+                document.getElementById('bagana31').innerHTML="Team4"
+                document.getElementById('bagana41').innerHTML="Team1"
+            }else{
+                document.getElementById('bagana21').innerHTML="Winner is Team4"
+                document.getElementById('bagana22').innerHTML=""
+                document.getElementById('bagana31').innerHTML="Team1"
+                document.getElementById('bagana41').innerHTML="Team4"
+            }
+        }else if(ehniionoo1.innerHTML<hoyrdohonoo1.innerHTML&&ehniionoo2.innerHTML>hoyrdohonoo2.innerHTML){
+            if(hoyrdohonoo1.innerHTML>ehniionoo2.innerHTML){
+                document.getElementById('bagana21').innerHTML="Winner is Team2"
+                document.getElementById('bagana22').innerHTML=""
+                document.getElementById('bagana31').innerHTML="Team3"
+                document.getElementById('bagana41').innerHTML="Team2"
+            }else{
+                document.getElementById('bagana21').innerHTML="Winner is Team3"
+                document.getElementById('bagana22').innerHTML=""
+                document.getElementById('bagana31').innerHTML="Team2"
+                document.getElementById('bagana41').innerHTML="Team3"
+            }
+        }else if(ehniionoo1.innerHTML<hoyrdohonoo1.innerHTML&&ehniionoo2.innerHTML<hoyrdohonoo2.innerHTML){
+            if(hoyrdohonoo1.innerHTML>hoyrdohonoo2.innerHTML){
+                document.getElementById('bagana21').innerHTML="Winner is Team2"
+                document.getElementById('bagana22').innerHTML=""
+                document.getElementById('bagana31').innerHTML="Team4"
+                document.getElementById('bagana41').innerHTML="Team2"
+            }else{
+                document.getElementById('bagana21').innerHTML="Winner is Team4"
+                document.getElementById('bagana22').innerHTML=""
+                document.getElementById('bagana31').innerHTML="Team2"
+                document.getElementById('bagana41').innerHTML="Team4"
+            }
+        }
                     }  
                     if(hugatsaa6.innerHTML == udur.innerHTML){
                         document.getElementById('ehniionoo6').innerHTML=onoo11();
                         document.getElementById('hoyrdohonoo6').innerHTML=onoo11(); 
                         document.getElementById('temtseen6').style.backgroundColor="aqua";
-                    if(ehniionoo6.innerHTML > hoyrdohonoo6.innerHTML){
-                        bagana23.innerHTML=bagana41.innerHTML
-                        bagana24.innerHTML=bagana31.innerHTML
-                    }else{
-                        bagana23.innerHTML=bagana41.innerHTML
-                        bagana24.innerHTML=bagana31.innerHTML
-                    }
+                        if(ehniionoo3.innerHTML>hoyrdohonoo3.innerHTML&&ehniionoo4.innerHTML>hoyrdohonoo4.innerHTML){
+            if(ehniionoo3.innerHTML>ehniionoo4.innerHTML){
+                document.getElementById('bagana23').innerHTML="Winner is Team5"
+                document.getElementById('bagana24').innerHTML=""
+                document.getElementById('bagana32').innerHTML="Team7"
+                document.getElementById('bagana42').innerHTML="Team5"
+            }else{
+                document.getElementById('bagana23').innerHTML="Winner is Team7"
+                document.getElementById('bagana24').innerHTML=""
+                document.getElementById('bagana32').innerHTML="Team5"
+                document.getElementById('bagana42').innerHTML="Team7"
+            }
+        }else if(ehniionoo3.innerHTML>hoyrdohonoo3.innerHTML&&ehniionoo4.innerHTML<hoyrdohonoo4.innerHTML){
+            if(ehniionoo3.innerHTML>hoyrdohonoo4.innerHTML){
+                document.getElementById('bagana23').innerHTML="Winner is Team5"
+                document.getElementById('bagana24').innerHTML=""
+                document.getElementById('bagana32').innerHTML="Team8"
+                document.getElementById('bagana42').innerHTML="Team5"
+
+            }else{
+                document.getElementById('bagana23').innerHTML="Winner is Team8"
+                document.getElementById('bagana24').innerHTML=""
+                document.getElementById('bagana32').innerHTML="Team5"
+                document.getElementById('bagana42').innerHTML="Team8"
+            }
+        }else if(ehniionoo3.innerHTML<hoyrdohonoo3.innerHTML&&ehniionoo4.innerHTML>hoyrdohonoo4.innerHTML){
+            if(hoyrdohonoo3.innerHTML>ehniionoo4.innerHTML){
+                document.getElementById('bagana23').innerHTML="Winner is Team6"
+                document.getElementById('bagana24').innerHTML=""
+                document.getElementById('bagana32').innerHTML="Team7"
+                document.getElementById('bagana42').innerHTML="Team6"
+            }else{
+                document.getElementById('bagana23').innerHTML="Winner is Team7"
+                document.getElementById('bagana24').innerHTML=""
+                document.getElementById('bagana32').innerHTML="Team6"
+                document.getElementById('bagana42').innerHTML="Team7"
+            }
+        }else if(ehniionoo3.innerHTML<hoyrdohonoo3.innerHTML&&ehniionoo4.innerHTML<hoyrdohonoo4.innerHTML){
+            if(hoyrdohonoo3.innerHTML>hoyrdohonoo4.innerHTML){
+                document.getElementById('bagana23').innerHTML="Winner is Team6"
+                document.getElementById('bagana24').innerHTML=""
+                document.getElementById('bagana32').innerHTML="Team8"
+                document.getElementById('bagana42').innerHTML="Team6"
+            }else{
+                document.getElementById('bagana23').innerHTML="Winner is Team8"
+                document.getElementById('bagana24').innerHTML=""
+                document.getElementById('bagana32').innerHTML="Team6"
+                document.getElementById('bagana42').innerHTML="Team8"
+            }
+        }
                     }
                     if(hugatsaa7.innerHTML == udur.innerHTML){
                             document.getElementById('ehniionoo7').innerHTML=onoo11();
                             document.getElementById('hoyrdohonoo7').innerHTML=onoo11(); 
                             document.getElementById('temtseen7').style.backgroundColor="aqua";
-                        
                     }
                     if(hugatsaa8.innerHTML == udur.innerHTML){
                             document.getElementById('ehniionoo8').innerHTML=onoo11();
